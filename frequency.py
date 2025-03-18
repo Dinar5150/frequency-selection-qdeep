@@ -22,11 +22,12 @@ except ImportError:
     pass
 
 import dimod
-from dwave.system import LeapHybridSampler
+from dwave.samplers import SimulatedAnnealingSampler
 
 from philadelphia import load_problem, get_forbidden_set, plot_nodes
 from utilities import check_results, get_frequencies, print_frequency_separations
 
+NUM_READS = 100
 
 def construct_bqm(demand, nfreq, reuse_distances, penalty_coef=1.0):
     """Construct BQM for feasibility frequency assignment problem.
@@ -147,8 +148,8 @@ if __name__ == '__main__':
     print('{} variables'.format(bqm.num_variables))
     print('{} interactions'.format(bqm.num_interactions))
             
-    sampler = LeapHybridSampler()
-    results = sampler.sample(bqm, label='Example - Frequency Selection')
+    sampler = SimulatedAnnealingSampler()
+    results = sampler.sample(bqm, label='Example - Frequency Selection', num_reads=NUM_READS)
     results.resolve() # Get solution before printing "Solution:"
 
     print('\nSolution:')
