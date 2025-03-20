@@ -5,6 +5,10 @@
    https://circleci.com/gh/dwave-examples/frequency-selection.svg?style=shield)](
    https://circleci.com/gh/dwave-examples/frequency-selection)
 
+# Important note
+
+This repository is a fork of [D-Wave's original frequency-selection](https://github.com/dwave-examples/frequency-selection). The contributors to this fork do not claim ownership or authorship of the original codebase. All credit for the original work belongs to D-Wave Systems and its respective contributors.
+
 # Frequency Selection
 
 Frequency selection problems have to do with assigning frequencies to
