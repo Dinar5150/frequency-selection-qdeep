@@ -2,14 +2,20 @@ import numpy as np
 import argparse
 import textwrap
 
-import matplotlib.pyplot as plt
+# Try to import matplotlib if available (for plotting)
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    pass
+
 
 from philadelphia import load_problem, get_forbidden_set, plot_nodes
 from utilities import check_results, get_frequencies, print_frequency_separations
 
+# Import QDeepHybridSolver from the new SDK.
 from qdeepsdk import QDeepHybridSolver
 
-def construct_qubo(demand, nfreq, reuse_distances, penalty_coef=10.0):
+def construct_qubo(demand, nfreq, reuse_distances, penalty_coef=1.0):
     """
     Construct a QUBO matrix for the frequency assignment problem.
     Each binary variable x_v_f indicates whether frequency f is assigned to node v.
