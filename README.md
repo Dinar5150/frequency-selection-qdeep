@@ -89,7 +89,7 @@ The code consists of the following steps:
 2. A binary quadratic model is constructed to represent the problem definition.
    The objective function is formed by encoding all of the constraints as
    penalty functions.
-3. The problem is solved using a QDeepSDK's hybrid BQM solver.
+3. The problem is solved using a QDeepSDK's hybrid QUBO solver.
 4. Information about the feasibility of the solution is printed to the screen,
    optionally displaying a plot of the stations to indicate any constraint
    violations.
