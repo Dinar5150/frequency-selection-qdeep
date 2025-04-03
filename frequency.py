@@ -169,7 +169,7 @@ if __name__ == '__main__':
     # Initialize the QDeepHybridSolver and configure parameters
     solver = QDeepHybridSolver()
     # If an authentication token is needed, set it here:
-    solver.token = "mtagdfsplb"
+    solver.token = "your-auth-token"
     solver.num_reads = 100
 
     # Solve the QUBO problem using the new hybrid solver
