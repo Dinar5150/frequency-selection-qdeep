@@ -84,9 +84,8 @@ def get_frequencies(nodes, nfreq, sample):
     """
     frequencies = {}
     for v in nodes:
-        frequencies[v] = [i for i in range(nfreq) if sample.sample['x_{}_{}'.format(v,i)]]
+        frequencies[v] = [i for i in range(nfreq) if sample['x_{}_{}'.format(v, i)]]
     return frequencies
-
 
 def print_frequency_separations(reuse_distances, solution):
     """Print detailed information about frequency separation in solution."""
