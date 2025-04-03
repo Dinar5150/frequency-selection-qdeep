@@ -50,13 +50,13 @@ for using increasingly smaller sets of candidate frequencies.
 To run the demonstration, execute:
 
 ```bash
-python frequency.py --show-plot
+python frequency.py P9 --nfreq 20 --show-plot
 ```
 
 Or:
 
 ```bash
-python frequency.py --save-plot
+python frequency.py P9 --nfreq 20 --save-plot
 ```
 
 This loads the default small problem, which uses only a subset of the stations
